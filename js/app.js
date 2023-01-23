@@ -27,7 +27,6 @@ function nextPrime(n){
 
 next.addEventListener('click',e =>{
     n+=1;
-    console.log(n);
     display.innerText=nextPrime(n);
 })
 
