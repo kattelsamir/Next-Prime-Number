@@ -5,7 +5,7 @@ let next = document.getElementById('next');
 let previous = document.getElementById('previous');
 let display = document.getElementById('display');
 
-let n =  0;
+var n =  0;
 display.innerText=primeNum[n];
 
 function nextPrime(n){
@@ -27,11 +27,15 @@ function nextPrime(n){
 
 next.addEventListener('click',e =>{
     n+=1;
+    console.log(n);
     display.innerText=nextPrime(n);
 })
 
 previous.addEventListener('click',e=>{
-    primeNum.pop();
+    if (primeNum.length!=1) {
+        primeNum.pop();
+    }
     display.innerText=primeNum[primeNum.length-1];
 })
+
 
